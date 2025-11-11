@@ -1,1 +1,36 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: "Acumin Pro";
+  src: url("/fonts/acumin-pro/Acumin-RPro.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Acumin Pro";
+  src: url("/fonts/acumin-pro/Acumin-ItPro.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Acumin Pro";
+  src: url("/fonts/acumin-pro/Acumin-BdPro.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Acumin Pro";
+  src: url("/fonts/acumin-pro/Acumin-BdItPro.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@theme {
+  --color-regal-red: #ed103b;
+  --color-regal-black: #00143d;
+  --color-regal-navy: #01133d;
+  --font-sans: "Acumin Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
