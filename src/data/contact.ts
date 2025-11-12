@@ -12,7 +12,6 @@ export const ContactData: IContact = {
       href: "https://www.facebook.com/people/Mu%25C4%259Fla-Oto-Kurtarma/61583353568019/",
       title: "facebook",
     },
-    { id: 2, href: "", title: "x" },
     {
       id: 3,
       href: "https://www.instagram.com/muglaotokurtarma?igsh=ZDQwZjljbTl0Y2Q4&utm_source=qr",

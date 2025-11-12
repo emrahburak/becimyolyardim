@@ -7,13 +7,11 @@ import { footerItems } from "./data/footerData";
 export default function App() {
 
   return (
-    <div className="font-sans">
+    <div className="font-sans min-h-screen flex flex-col">
       <Header />
       <Hero />
       <Footer footerItems={footerItems} />
-      <div className="mt-6">
-        <WhatsupField />
-      </div>
+      <WhatsupField />
     </div>
   );
 }
