@@ -4,6 +4,7 @@ import { Phone } from 'lucide-react';
 import { MapPin } from 'lucide-react';
 import { Send } from 'lucide-react';
 import { renderSocialIcon } from "../RenderSocial";
+import { formatPhone } from "@/utils/phoneUtil";
 
 
 
@@ -53,12 +54,13 @@ export default function Footer({ footerItems }: FooterProps) {
 
                   {item.contact.address}
                 </a>
-                <a href={`tel:${item.contact.phone90}`} className="inline-flex items-start gap-2.5 justify-start">
+                <a href={`tel:${formatPhone(item.contact.phone90).tel}`}
+                  className="inline-flex items-start gap-2.5 justify-start">
 
                   <span className="bg-white/30 backdrop-blur-sm p-1 rounded-sm">
                     <Phone className="text-transparent" fill="#ffff" size={14} />
                   </span>
-                  {item.contact.phone90}
+                  {formatPhone(item.contact.phone90).display}
                 </a>
                 <a className="inline-flex items-start gap-2.5 justify-start">
                   <span className="bg-white/30 backdrop-blur-sm p-1 rounded-sm">

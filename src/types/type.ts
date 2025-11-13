@@ -26,3 +26,16 @@ export interface FooterLinkGroup {
   text?: string;
   contact?: IContact;
 }
+
+export interface IAbout {
+  title: string;
+  description: string;
+  attributes: string[];
+  contact?: IContact;
+}
+
+export interface IService {
+  id: number;
+  title: string;
+  description: string;
+}
