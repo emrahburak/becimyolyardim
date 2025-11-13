@@ -1,3 +1,4 @@
+import AboutUs from "./components/AboutUs";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
@@ -10,6 +11,7 @@ export default function App() {
     <div className="font-sans min-h-screen flex flex-col">
       <Header />
       <Hero />
+      <AboutUs />
       <Footer footerItems={footerItems} />
       <WhatsupField />
     </div>
