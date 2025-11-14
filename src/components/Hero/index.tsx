@@ -3,7 +3,7 @@ import BusinessPhoto from '@/assets/images/webp/becim-03.webp'
 
 export default function Hero() {
   return (
-    <div className="relative w-full h-[720px] flex">
+    <div className="relative w-full h-[720px] flex" id="hero">
       {/* Sol taraf: mekanik çarklar */}
       <div
         className="w-1/2 h-full relative bg-cover bg-center"

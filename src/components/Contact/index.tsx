@@ -14,15 +14,14 @@ interface contactProps {
 export default function ContactUs({ contactItems }: contactProps) {
 
   return (
-    <section id="contact"
-      className="w-full py-16 bg-cover bg-center grid grid-cols-2 font-sans relative z-10 overflow-hidden"
-
+    <section
+      id="contact"
+      className="w-full py-16 bg-cover bg-center grid grid-cols-1 md:grid-cols-2 font-sans relative z-10 overflow-hidden"
       style={{
         backgroundImage: `linear-gradient(rgba(255,255,255,0.90), rgba(255,255,255,0.90)), url(${MechanicalGears})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
-
     >
       <div className='w-full h-full flex items-center justify-center relative z-0'>
 

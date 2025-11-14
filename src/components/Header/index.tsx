@@ -1,9 +1,11 @@
 import { ContactData } from "../../data/contact";
+import { formatPhone } from "@/utils/phoneUtil";
 
 import { Phone } from 'lucide-react';
 import { MapPin } from 'lucide-react';
 import { Send } from 'lucide-react';
 import { Instagram, Facebook } from 'lucide-react'
+
 
 type SocialItem = {
   href?: string
@@ -31,20 +33,51 @@ export function renderSocialIcon(
 
 export default function Header() {
   const contactData = ContactData
+  const { display, tel } = formatPhone(contactData.phone90)
 
   return (
-    <header className="fixed top-0 left-0 w-full  text-white shadow-md z-50 flex flex-row font-sans">
-      <div className="bg-regal-red p-3 w-1/5 flex flex-col items-center justify-center gap-2 ">
-        <img src="/logo.png" alt="Logo" className="w-16 h-auto rounded-full" />
-        <p className="text-white  font-bold">Becim Oto Kurtarma</p>
-      </div>
+    <header className="fixed top-0 left-0 w-full h-28  text-white shadow-md z-50 flex flex-row font-sans">
+      <div className="w-1/4 h-full flex flex-col relative">
 
+        {/* Üst */}
+        <div className="w-full h-1/2 relative bg-gray-900">
+          <div
+            className="absolute inset-0"
+            style={{
+              clipPath: "polygon(0 0, 68% 0, 100% 100%, 0% 100%)",
+              backgroundColor: "#ed103b",
+            }}
+          ></div>
+        </div>
+
+        {/* Alt */}
+        <div className="w-full h-1/2 relative bg-white">
+          <div
+            className="absolute inset-0"
+            style={{
+              clipPath: "polygon(0 0, 100% 0, 68% 100%, 0% 100%)",
+              backgroundColor: "#ed103b",
+            }}
+          ></div>
+        </div>
+
+        {/* MERKEZDE LOGO + YAZI */}
+        <div className="absolute inset-0 flex flex-nowrap gap-3 items-center px-4  z-10 pointer-events-none">
+          <img src="/logo.png" alt="Logo" className="w-16 h-auto rounded-full mb-2" />
+          <div>
+            <p className="text-white font-extrabold text-xl">Becim</p>
+            <p className="font-semibold text-lg">Oto Kurtarma</p>
+          </div>
+        </div>
+
+      </div>
       <div className="w-full">
         <div className=" text-white bg-gray-900 flex flex-row items-center justify-around  py-4">
           <div className="flex items-center justify-start gap-3 font-normal text-sm">
             <div className="inline-flex flex-nowrap gap-1 items-center justify-center">
               <Phone className="text-black" fill="#ed103b" />
-              {contactData.phone90}</div>
+              <a href={`tel:${tel}`}>{display}</a>
+            </div>
 
             <div className="inline-flex flex-nowrap gap-1 items-center justify-center">
               <Send className="text-black" fill="#ed103b" />
