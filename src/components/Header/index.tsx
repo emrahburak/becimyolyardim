@@ -5,8 +5,6 @@ import { MapPin } from 'lucide-react';
 import { Send } from 'lucide-react';
 import { Instagram, Facebook } from 'lucide-react'
 
-import { formatPhone } from '@/utils/phoneUtil'
-
 type SocialItem = {
   href?: string
   title?: string
@@ -33,49 +31,49 @@ export function renderSocialIcon(
 
 export default function Header() {
   const contactData = ContactData
-  const { display, tel } = formatPhone(contactData.phone90)
 
   return (
-    <div>
-      <header className="fixed top-0 left-0 w-full  text-white shadow-md z-50 flex flex-row">
-        <div className="bg-regal-red p-3 w-1/5">
-          <div className="text-2xl font-bold">Becim Yol Yardım</div>
-        </div>
+    <header className="fixed top-0 left-0 w-full  text-white shadow-md z-50 flex flex-row font-sans">
+      <div className="bg-regal-red p-3 w-1/5 flex flex-col items-center justify-center gap-2 ">
+        <img src="/logo.png" alt="Logo" className="w-16 h-auto rounded-full" />
+        <p className="text-white  font-bold">Becim Oto Kurtarma</p>
+      </div>
 
-        <div className="w-full">
-          <div className=" text-white bg-gray-900 flex flex-row items-center justify-around  py-4">
-            <div className="flex items-center justify-start gap-3 font-normal text-sm">
-              <div className="inline-flex flex-nowrap gap-1 items-center justify-center">
-                <Phone className="text-black" fill="#ed103b" />
-                <a href={`tel:${tel}`}>{display}</a>
-              </div>
-              <div className="inline-flex flex-nowrap gap-1 items-center justify-center">
-                <Send className="text-black" fill="#ed103b" />
-                {contactData.mail}
-              </div>
+      <div className="w-full">
+        <div className=" text-white bg-gray-900 flex flex-row items-center justify-around  py-4">
+          <div className="flex items-center justify-start gap-3 font-normal text-sm">
+            <div className="inline-flex flex-nowrap gap-1 items-center justify-center">
+              <Phone className="text-black" fill="#ed103b" />
+              {contactData.phone90}</div>
 
-              <div className="inline-flex flex-nowrap gap-1 items-center justify-center">
-                <MapPin className="text-black" fill="#ed103b" />
-                {contactData.address}
-              </div>
+            <div className="inline-flex flex-nowrap gap-1 items-center justify-center">
+              <Send className="text-black" fill="#ed103b" />
+              {contactData.mail}
             </div>
-            <div className="flex items-center justify-start gap-1.5">
-              {contactData.social?.map((item, index) => (
-                <a key={index} href={item.href} target="_blank" rel="noopener noreferrer">
-                  {renderSocialIcon(item, "text-black w-5 h-5", "#ffff")}
-                </a>
-              ))}
+
+            <div className="inline-flex flex-nowrap gap-1 items-center justify-center">
+              <MapPin className="text-black" fill="#ed103b" />
+              {contactData.address}
             </div>
           </div>
-          <nav className="flex items-center  gap-6 bg-white  font-semibold text-regal-black py-3 w-full px-28 ">
-            <a href="#hero">Ana Sayfa</a>
-            <a href="#about">Hakkımızda</a>
-            <a href="#services">Hizmetler</a>
-            <a href="#contact">İletişim</a>
-          </nav>
+          <div className="flex items-center justify-start gap-1.5">
+            {contactData.social?.map((item, index) => (
+              <a key={index} href={item.href} target="_blank" rel="noopener noreferrer">
+                {renderSocialIcon(item, "text-black w-5 h-5", "#ffff")}
+              </a>
+            ))}
+          </div>
         </div>
-      </header>
-    </div>
+        <nav className="flex items-center  gap-6 bg-white  font-semibold text-regal-black py-3 w-full px-28 ">
+          <a href="#hero">Ana Sayfa</a>
+          <a href="#about">Hakkımızda</a>
+          <a href="#services">Hizmetler</a>
+          <a href="#contact">İletişim</a>
+        </nav>
+      </div>
+    </header>
+
+
   );
 };
 

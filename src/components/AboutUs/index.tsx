@@ -1,7 +1,7 @@
 import Image1 from '@/assets/images/webp/becim-01.webp'
 import Image2 from '@/assets/images/webp/becim-05.webp'
 import Image3 from '@/assets/images/webp/becim-02.webp'
-import MechanicalGears from '@/assets/images/webp/hero-04.webp'
+import MechanicalGears from '@/assets/images/webp/hero-10.webp'
 import { AboutData } from '../../data/aboutData'
 import { Gem, BadgeCheck, Phone } from 'lucide-react';
 

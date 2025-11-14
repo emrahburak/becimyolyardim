@@ -26,7 +26,7 @@ export default function Services() {
 
   return (
     <div id="services"
-      className="w-full py-16  bg-cover bg-center mt-20"
+      className="w-full py-16  bg-cover bg-center"
       style={{
         backgroundImage: `linear-gradient(rgba(255,255,255,0.90), rgba(255,255,255,0.90)), url(${MechanicalGears})`,
         backgroundSize: 'cover',
