@@ -19,7 +19,9 @@ export default function Footer({ footerItems }: FooterProps) {
 
   return (
     <div className="bg-regal-navy text-white w-full font-sans py-8 mt-auto">
-      <ul className="grid grid-flow-col gap-2 w-3/4 mx-auto">
+      <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 w-3/4 mx-auto">
+
+
         {footerItems?.map((item, index) => (
           <li key={index} className="space-y-2.5 px-8">
             <h3 className="font-bold">{item.title}</h3>

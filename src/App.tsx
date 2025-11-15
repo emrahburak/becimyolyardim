@@ -12,7 +12,7 @@ import HamburgerMenu from "./components/HamburgerMenu";
 export default function App() {
 
   return (
-    <div className="font-sans min-h-screen flex flex-col w-full">
+    <div className="font-sans min-h-screen flex flex-col w-full max-w-screen overflow-x-hidden">
       {/* Desktop Header */}
       <div className="hidden lg:block w-full">
         <Header />
