@@ -40,24 +40,32 @@ export default function Services() {
             <Crown className='text-regal-red' />
             <h2 className="text-regal-red font-semibold font-sans">Hizmetlerimiz</h2>
           </div>
-        <h1 className='font-semibold font-sans text-4xl text-regal-navy  text-center'>Neler Yapıyoruz</h1>
+          <h1 className='font-semibold font-sans text-4xl text-regal-navy  text-center'>Neler Yapıyoruz</h1>
         </div>
 
 
         <Swiper
           spaceBetween={2}
-          slidesPerView={4}
           freeMode={true}
           loop={true}
+          centeredSlides={true}
+
           autoplay={{
             delay: 2500,   // 2.5 saniye
             disableOnInteraction: false
           }}
+          breakpoints={{
+            0: { slidesPerView: 1 },      // sm ve altı
+            640: { slidesPerView: 2 },    // sm
+            1024: { slidesPerView: 4 }    // lg ve üstü (eski 4 değerin)
+          }}
           modules={[FreeMode, Autoplay]}
         >
           {serviceData.map((service) => (
-            <SwiperSlide>
-              <Card cardItem={service} />
+            <SwiperSlide >
+              <div className="w-full flex justify-center items-center">
+                <Card cardItem={service} />
+              </div>
             </SwiperSlide>
           ))}
         </Swiper>
