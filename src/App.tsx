@@ -23,7 +23,7 @@ export default function App() {
       <div className="block lg:hidden w-full">
         <HamburgerMenu />
       </div>
-      <Hero slideItems={bannerData} />
+      <Hero slideItems={bannerData} contactItems={ContactData} />
       <AboutUs />
       <Services />
       <ContactUs contactItems={ContactData} />

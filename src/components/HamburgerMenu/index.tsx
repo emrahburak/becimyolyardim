@@ -37,6 +37,7 @@ export default function HamburgerMenu() {
             &times;
           </button>
 
+          <img src="/logo.png" alt="Logo" className="w-16 h-auto rounded-full mb-2" />
           <a href="#hero" onClick={() => setOpen(false)}>Ana Sayfa</a>
           <a href="#about" onClick={() => setOpen(false)}>Hakkımızda</a>
           <a href="#services" onClick={() => setOpen(false)}>Hizmetler</a>

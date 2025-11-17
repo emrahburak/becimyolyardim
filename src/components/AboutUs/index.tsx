@@ -40,7 +40,8 @@ export default function AboutUs() {
 
         {/* Ortadaki bindirilen (2. görsel) */}
         <div
-          className="absolute z-10 w-64 h-64 bg-cover bg-center shadow-lg top-1/2 -translate-y-1/2"
+          className="hidden lg:block absolute z-10 w-64 h-64 bg-cover bg-center shadow-lg top-1/2 -translate-y-1/2"
+
           style={{
             backgroundImage: `url(${Image2})`,
             left: '60%',

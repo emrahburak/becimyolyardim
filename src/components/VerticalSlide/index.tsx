@@ -29,6 +29,7 @@ export default function VerticalSlide({ slideItems }: VerticalSlideProps) {
       modules={[Pagination, Autoplay]}
       className="mySwiper h-auto max-h-[200px]  flex items-center justify-center "
     >
+
       {slideItems?.map((item) => (
         <SwiperSlide
           key={item.id}

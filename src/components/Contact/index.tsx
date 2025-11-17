@@ -54,17 +54,21 @@ export default function ContactUs({ contactItems }: contactProps) {
         </div>
 
         <div
-          className="absolute -z-10 w-64 h-64 bg-cover bg-center top-1/2 left-[60%] -translate-y-1/6 shadow-sm"
+          className="absolute -z-10 w-64 h-64 bg-cover bg-center top-1/2 left-[60%] -translate-y-1/6 shadow-sm hidden md:block"
+
           style={{
             backgroundImage: `url(${Image1})`,
           }}
         ></div>
       </div>
-      <div className='w-full h-full space-y-4 '>
+      <div className="w-full h-full space-y-4 mt-10 lg:mt-0">
 
-        <div className='inline-flex items-center gap-2 ' >
-          <Handshake className='text-regal-red' />
-          <h2 className="text-regal-red font-semibold font-sans">Ulaşım</h2>
+
+        <div className="w-full flex flex-col items-center lg:flex-row lg:items-center lg:justify-start gap-2">
+          <Handshake className="text-regal-red" />
+          <h2 className="text-regal-red font-semibold font-sans text-center lg:text-left">
+            Ulaşım
+          </h2>
         </div>
         <div className='w-full p-5 '>
           <LocationField mapUrl={contactItems.map} />
