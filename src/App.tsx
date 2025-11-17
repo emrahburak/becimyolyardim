@@ -8,6 +8,8 @@ import WhatsupField from "./components/Watsup";
 import { footerItems } from "./data/footerData";
 import { ContactData } from "./data/contact";
 import HamburgerMenu from "./components/HamburgerMenu";
+import { bannerData } from "./data/bannerData";
+
 
 export default function App() {
 
@@ -21,7 +23,7 @@ export default function App() {
       <div className="block lg:hidden w-full">
         <HamburgerMenu />
       </div>
-      <Hero />
+      <Hero slideItems={bannerData} />
       <AboutUs />
       <Services />
       <ContactUs contactItems={ContactData} />

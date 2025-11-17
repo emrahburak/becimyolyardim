@@ -1,3 +1,8 @@
+export type BannerData = {
+  id: number;
+  title: string;
+  description: string;
+};
 export type socialLinks = {
   id: number;
   title: string;

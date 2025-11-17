@@ -1,23 +1,29 @@
-import MechanicalGears from '@/assets/images/webp/hero-06.webp'
+import MechanicalGears from '@/assets/images/webp/hero-08.webp'
 import BusinessPhoto from '@/assets/images/webp/becim-03.webp'
+import VerticalSlide from '../VerticalSlide';
+import type { BannerData } from '@/types/type';
 
-export default function Hero() {
+
+interface HeroProps {
+  slideItems: BannerData[]
+}
+
+export default function Hero({ slideItems }: HeroProps) {
   return (
     <div
       id="hero"
-      className="relative w-full min-h-[720px] flex flex-col lg:flex-row overflow-hidden"
+      className="relative w-full min-h-[720px] flex flex-col lg:flex-row pt-[80px] lg:pt-0 "
     >
       {/* Sol taraf */}
       <div
-        className="w-full lg:w-1/2 h-[360px] lg:h-[720px] relative bg-cover bg-center"
+        className="w-full lg:w-1/2 h-[360px] lg:h-[720px] bg-cover bg-center flex items-center justify-center"
+
         style={{
           backgroundImage: `linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url(${MechanicalGears})`,
         }}
       >
-        <div className="absolute inset-0 z-10 flex items-center justify-center px-6">
-          <div className="text-gray-900 font-semibold text-lg lg:text-xl max-w-md text-center lg:text-left">
-            Ac, eu vestibulum penatibus arcu tempor ipsum id nunc ligula.
-          </div>
+        <div className='px-4'>
+          <VerticalSlide slideItems={slideItems} />
         </div>
       </div>
 
