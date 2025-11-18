@@ -19,6 +19,10 @@ export default function Footer({ footerItems }: FooterProps) {
 
   return (
     <div className="bg-regal-navy text-white w-full font-sans py-8 mt-auto">
+      <div className="h-full flex items-center  w-full justify-center">
+        <img src="/logo.png" alt="Logo" className="w-16 h-auto rounded-full mb-2 " />
+      </div>
+
       <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 w-3/4 mx-auto">
 
 

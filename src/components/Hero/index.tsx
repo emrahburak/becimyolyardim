@@ -19,11 +19,11 @@ export default function Hero({ slideItems, contactItems }: HeroProps) {
   return (
     <div
       id="hero"
-      className="relative w-full min-h-[720px] flex flex-col lg:flex-row pt-[80px] lg:pt-0 "
+      className="relative w-full min-h-[520px] lg:min-h-[560px] flex flex-col lg:flex-row pt-[60px] lg:pt-0 "
     >
       {/* Sol taraf */}
       <div
-        className="w-full lg:w-1/2 h-[360px] lg:h-[720px] bg-cover bg-center flex flex-col items-center justify-center"
+        className="w-full lg:w-1/2 h-[320px] lg:h-[640px] bg-cover bg-center flex flex-col items-center justify-center"
 
         style={{
           backgroundImage: `linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url(${MechanicalGears})`,
@@ -31,8 +31,7 @@ export default function Hero({ slideItems, contactItems }: HeroProps) {
       >
         <div className='px-4  w-full space-y-16'>
           <VerticalSlide slideItems={slideItems} />
-
-          <div className="hidden lg:flex w-full items-center justify-evenly">
+          <div className="hidden lg:flex w-full items-center justify-evenly ">
             <a className="bg-regal-red text-white px-4 py-2 font-semibold" href="#services">Daha Fazla Oku</a>
             <div className='inline-flex items-center gap-2 text-right'>
               <span className='bg-black rounded-full p-2  shadow-sm cursor-pointer'>
@@ -42,11 +41,10 @@ export default function Hero({ slideItems, contactItems }: HeroProps) {
             </div>
           </div>
         </div>
-
       </div>
 
       {/* Sağ taraf */}
-      <div className="relative w-full lg:w-1/2 h-[360px] lg:h-[720px] overflow-hidden">
+      <div className="relative w-full lg:w-1/2 h-[320px] lg:h-[640px] overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center hero-image"
           style={{

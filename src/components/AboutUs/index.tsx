@@ -67,7 +67,7 @@ export default function AboutUs() {
           <Gem className='text-regal-red' />
           <h2 className="text-regal-red font-semibold font-sans">Hakkımızda</h2>
         </div>
-        <h1 className='font-semibold font-sans text-4xl text-black whitespace-pre-line'>{aboutData.title}</h1>
+        <h1 className='font-bold font-sans text-4xl text-gray-700 whitespace-pre-line'>{aboutData.title}</h1>
         <p className="text-lg text-gray-700 leading-relaxed">
           {aboutData.description}
         </p>
