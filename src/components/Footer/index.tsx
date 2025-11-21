@@ -55,7 +55,7 @@ export default function Footer({ footerItems }: FooterProps) {
               <div className="space-y-2.5 text-xs">
                 <a className="inline-flex items-start gap-2.5 justify-start">
                   <span className="bg-white/30 backdrop-blur-sm p-1 rounded-sm">
-                    <MapPin className="text-black" fill="#fff" size={16} />
+                    <MapPin className="text-regal-navy" fill="#ffff" size={16} strokeWidth={1} />
                   </span>
 
                   {item.contact.address}
@@ -64,13 +64,13 @@ export default function Footer({ footerItems }: FooterProps) {
                   className="inline-flex items-start gap-2.5 justify-start">
 
                   <span className="bg-white/30 backdrop-blur-sm p-1 rounded-sm">
-                    <Phone className="text-transparent" fill="#ffff" size={14} />
+                    <Phone className="text-regal-navy" fill="#ffff" size={14} />
                   </span>
                   {formatPhone(item.contact.phone90).display}
                 </a>
                 <a className="inline-flex items-start gap-2.5 justify-start">
                   <span className="bg-white/30 backdrop-blur-sm p-1 rounded-sm">
-                    <Send className="text-transparent" fill="#ffff" size={14} />
+                    <Send className="text-regal-navy" fill="#ffff" size={14} />
                   </span>
                   {item.contact.mail}</a>
               </div>
@@ -83,11 +83,16 @@ export default function Footer({ footerItems }: FooterProps) {
         {footerItems.map((item) => (
           item.contact?.social?.map((socialItem, ids) => (
             <a key={ids} href={socialItem.href} target="_blank" rel="noopener noreferrer" className="bg-white/30 backdrop-blur-sm p-1 rounded-sm">
-              {renderSocialIcon(socialItem, "text-black w-5 h-5", "#ffff")}
+              {renderSocialIcon(socialItem, "text-regal-navy w-5 h-5", "#ffff")}
             </a>
           ))
         ))}
       </div>
+
+      <div className="text-xs text-white mt-3 text-center">
+        Web altyapısı ve arayüz geliştirmesi: <a href="https://github.com/emrahburak" target="_blank" rel="noopener noreferrer" className=" hover:text-regal-red">github.com/emrahburak</a>
+      </div>
+
     </div>
   );
 }

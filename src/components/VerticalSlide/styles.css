@@ -1,5 +1,5 @@
 /* Pagination container sola yaslı */
-.mySwiper .swiper-pagination {
+.mySwiperVertical .swiper-pagination {
   left: 0 !important;
   right: auto !important;
   top: 50%;
@@ -12,7 +12,7 @@
 }
 
 /* Pasif bullet'lar */
-.mySwiper .swiper-pagination-bullet {
+.mySwiperVertical .swiper-pagination-bullet {
   background-color: #ed103b; /* Pasif renk */
   width: 16px;
   height: 16px;
@@ -24,13 +24,13 @@
 }
 
 /* Aktif bullet */
-.mySwiper .swiper-pagination-bullet-active {
+.mySwiperVertical .swiper-pagination-bullet-active {
   background-color: #333333; /* Koyu gri */
 }
 
 /* Mobil için ekstra boşluk (ör. max 640px altı) */
 @media (max-width: 640px) {
-  .mySwiper .swiper-pagination {
+  .mySwiperVertical .swiper-pagination {
     top: 55%; /* biraz aşağı kaydır */
     padding-left: 6px;
   }

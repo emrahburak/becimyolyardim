@@ -16,7 +16,7 @@ export default function HamburgerMenu() {
     <div className="fixed top-0 left-0 w-full z-50 bg-regal-navy shadow-md font-sans">
       <div className="flex justify-between items-center p-4">
         <img src="/logo.png" alt="Logo" className="w-16 h-auto rounded-full mb-2" />
-        <div className="text-xl font-bold text-white">Becim Oto Kurtarma</div>
+        <div className="text-xl font-bold text-white">Beçim Oto Kurtarma</div>
         <button
           onClick={() => setOpen(!open)}
           className="flex flex-col w-6 h-6 justify-between items-center"

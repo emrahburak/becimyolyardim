@@ -5,7 +5,7 @@ export const bannerData: BannerData[] = [
     id: 1,
     title: "7/24 Acil Yol Yardım – Muğla’nın Her Noktasındayız",
     description:
-      "Milas’tan Fethiye’ye, Bodrum’dan Marmaris’e kadar tüm Muğla genelinde hızlı ve profesyonel acil yol yardımı sağlıyoruz. Ekibimiz günün her saati sadece bir telefon uzağınızda.",
+      "Muğla genelinde hızlı ve profesyonel acil yol yardımı sağlıyoruz. Ekibimiz günün her saati sadece bir telefon uzağınızda.",
   },
   {
     id: 2,

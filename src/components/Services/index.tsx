@@ -51,9 +51,11 @@ export default function Services() {
           centeredSlides={true}
 
           autoplay={{
-            delay: 2500,   // 2.5 saniye
+            delay: 0,
             disableOnInteraction: false
           }}
+          speed={12000}
+          grabCursor={false}
           breakpoints={{
             0: { slidesPerView: 1 },      // sm ve altı
             640: { slidesPerView: 2 },    // sm

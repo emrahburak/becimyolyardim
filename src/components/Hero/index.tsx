@@ -6,6 +6,7 @@ import type { BannerData, IContact } from '@/types/type';
 import { Phone } from 'lucide-react';
 
 import { formatPhone } from '@/utils/phoneUtil'
+import HorizontalSlide from '../HorizontalSlide';
 
 
 interface HeroProps {
@@ -30,7 +31,15 @@ export default function Hero({ slideItems, contactItems }: HeroProps) {
         }}
       >
         <div className='px-4  w-full space-y-16'>
-          <VerticalSlide slideItems={slideItems} />
+          {/* MOBILE + TABLET → Horizontal */}
+          <div className="block lg:hidden">
+            <HorizontalSlide slideItems={slideItems} />
+          </div>
+
+          {/* DESKTOP → Vertical */}
+          <div className="hidden lg:block">
+            <VerticalSlide slideItems={slideItems} />
+          </div>
           <div className="hidden lg:flex w-full items-center justify-evenly ">
             <a className="bg-regal-red text-white px-4 py-2 font-semibold" href="#services">Daha Fazla Oku</a>
             <div className='inline-flex items-center gap-2 text-right'>

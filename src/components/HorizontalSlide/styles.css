@@ -1,0 +1,30 @@
+/* Pagination: alt-orta hizalı (horizontal) */
+.mySwiperHorizontal .swiper-pagination {
+  bottom: 0 !important;
+  left: 50% !important;
+  right: auto !important;
+  top: auto !important;
+
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  box-sizing: content-box;
+}
+
+/* Pasif bullet */
+.mySwiperHorizontal .swiper-pagination-bullet {
+  background-color: #ed103b;
+  width: 12px;
+  height: 12px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  opacity: 1;
+  transition: all 0.3s;
+}
+
+/* Aktif bullet */
+.mySwiperHorizontal .swiper-pagination-bullet-active {
+  background-color: #333333;
+}

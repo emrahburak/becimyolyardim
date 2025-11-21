@@ -1,4 +1,5 @@
-import { Instagram, Facebook } from 'lucide-react'
+
+import { FaFacebookSquare,FaInstagram } from "react-icons/fa";
 
 type SocialItem = {
   href?: string
@@ -14,9 +15,9 @@ export function renderSocialIcon(
 
   switch (item.title?.toLowerCase()) {
     case 'instagram':
-      return <Instagram className={className} fill={fill} />
+      return <FaInstagram className={className} fill={fill} />
     case 'facebook':
-      return <Facebook className={className} fill={fill} />
+      return <FaFacebookSquare className={className} fill={fill} />
     default:
       return null
   }

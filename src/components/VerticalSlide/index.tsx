@@ -28,7 +28,7 @@ export default function VerticalSlide({ slideItems }: VerticalSlideProps) {
       }}
       speed={1800}
       modules={[Pagination, Autoplay]}
-      className="mySwiper h-full max-h-[260px]  flex items-center justify-end "
+      className="mySwiperVertical h-full max-h-[260px]  flex items-center justify-end "
     >
 
       {slideItems?.map((item) => (

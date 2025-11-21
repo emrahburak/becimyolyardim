@@ -1,5 +1,5 @@
 import Image1 from '@/assets/images/webp/becim-01.webp'
-import Image2 from '@/assets/images/webp/becim-05.webp'
+import Image2 from '@/assets/images/webp/becim-11.webp'
 import Image3 from '@/assets/images/webp/becim-02.webp'
 import MechanicalGears from '@/assets/images/webp/hero-10.webp'
 import { AboutData } from '../../data/aboutData'
@@ -62,7 +62,7 @@ export default function AboutUs() {
       </div>
 
       {/* Sağ taraf: metin */}
-      <div className="flex-1 space-y-6 px-6 lg:px-12 z-10">
+      <div className="flex-1 space-y-6 px-8 lg:px-12 z-10">
         <div className='inline-flex items-center gap-2' >
           <Gem className='text-regal-red' />
           <h2 className="text-regal-red font-semibold font-sans">Hakkımızda</h2>
