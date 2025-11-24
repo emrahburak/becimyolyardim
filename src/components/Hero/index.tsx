@@ -1,7 +1,7 @@
 import MechanicalGears from '@/assets/images/webp/hero-08.webp'
 import BusinessPhoto from '@/assets/images/webp/becim-03.webp'
 import VerticalSlide from '../VerticalSlide';
-import type { BannerData, IContact } from '@/types/type';
+import type { BannerData, FooterLinkGroup, IContact } from '@/types/type';
 
 import { Phone } from 'lucide-react';
 
@@ -10,11 +10,14 @@ import HorizontalSlide from '../HorizontalSlide';
 
 
 interface HeroProps {
-  slideItems: BannerData[]
-  contactItems: IContact
+  slideItems: BannerData[];
+  contactItems: IContact;
+  footerItems: FooterLinkGroup[]
 }
 
-export default function Hero({ slideItems, contactItems }: HeroProps) {
+export default function Hero({ slideItems, contactItems, footerItems }: HeroProps) {
+  const found = footerItems.find((item) => Array.isArray(item.links))
+  const links = found?.links ?? [];
 
   const { display, tel } = formatPhone(contactItems.phone90)
   return (
@@ -37,7 +40,7 @@ export default function Hero({ slideItems, contactItems }: HeroProps) {
           </div>
 
           {/* DESKTOP → Vertical */}
-          <div className="hidden lg:block">
+          <div className="hidden lg:block pl-6">
             <VerticalSlide slideItems={slideItems} />
           </div>
           <div className="hidden lg:flex w-full items-center justify-evenly ">
@@ -61,20 +64,15 @@ export default function Hero({ slideItems, contactItems }: HeroProps) {
           }}
         >
           {/* Mobil CTA — görsel içinde tam ortalanmış */}
-          <div className="lg:hidden absolute inset-0 flex  items-center justify-evenly gap-4 px-4 text-center">
-            <a className="bg-regal-red text-white px-4 py-2 font-semibold" href="#services">
-              Daha Fazla Oku
-            </a>
-
-            <div className="inline-flex items-center gap-2">
-              <span className="bg-white rounded-full p-2 shadow-sm cursor-pointer">
-                <Phone className="text-black" fill="#00000" />
-              </span>
-              <a className="text-white" href={`tel:${tel}`}>{display}</a>
-            </div>
-          </div>
+          <ul className="lg:hidden absolute inset-0 z-20 flex flex-col items-center justify-center px-4 py-3 text-justify">
+            {links.map((el) => (
+              <li key={el.id} className="text-white font-semibold text-2xl">{el.name}</li>
+            ))}
+          </ul>
           {/* Overlay */}
           <div className="hidden lg:block absolute bottom-0 left-0 w-1/2 h-1/2 bg-red-600 opacity-40 hero-overlay" />
+          <div className="block lg:hidden  absolute bottom-0 left-0 w-full h-full bg-regal-navy opacity-40 " />
+
         </div>
 
         {/* Kenar efekti */}

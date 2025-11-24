@@ -45,7 +45,7 @@ export default function Services() {
 
 
         <Swiper
-          spaceBetween={2}
+          spaceBetween={20}
           freeMode={true}
           loop={true}
           centeredSlides={true}

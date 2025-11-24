@@ -16,7 +16,7 @@ export default function ContactUs({ contactItems }: contactProps) {
   return (
     <section
       id="contact"
-      className="w-full py-16 bg-cover bg-center grid grid-cols-1 md:grid-cols-2 font-sans relative z-10 overflow-hidden"
+      className="w-full py-16 bg-cover bg-center grid grid-cols-1 lg:grid-cols-2 font-sans relative z-10 overflow-hidden"
       style={{
         backgroundImage: `linear-gradient(rgba(255,255,255,0.90), rgba(255,255,255,0.90)), url(${MechanicalGears})`,
         backgroundSize: 'cover',
@@ -70,8 +70,10 @@ export default function ContactUs({ contactItems }: contactProps) {
             Ulaşım
           </h2>
         </div>
-        <div className='w-full p-5 '>
-          <LocationField mapUrl={contactItems.map} />
+        <div className="w-full flex justify-center p-5">
+          <div className="w-full max-w-[520px]">
+            <LocationField mapUrl={contactItems.map} />
+          </div>
         </div>
       </div>
     </section>

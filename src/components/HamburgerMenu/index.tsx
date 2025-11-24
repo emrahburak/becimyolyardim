@@ -28,7 +28,7 @@ export default function HamburgerMenu() {
       </div>
 
       {open && (
-        <div className="fixed inset-0 flex flex-col justify-center items-center gap-8 text-2xl z-50 text-white bg-regal-navy">
+        <div className="fixed inset-0 flex flex-col justify-center items-center gap-8 font-semibold text-2xl z-50 text-white bg-regal-navy">
           {/* Sağ üst X */}
           <button
             onClick={() => setOpen(false)}

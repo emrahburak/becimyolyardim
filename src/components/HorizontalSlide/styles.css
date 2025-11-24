@@ -1,15 +1,17 @@
-/* Pagination: alt-orta hizalı (horizontal) */
+.mySwiperHorizontal {
+  position: relative;
+}
+
 .mySwiperHorizontal .swiper-pagination {
+  position: absolute !important;
   bottom: 0 !important;
   left: 50% !important;
-  right: auto !important;
-  top: auto !important;
-
   transform: translateX(-50%);
-  display: flex;
-  flex-direction: row;
-  gap: 8px;
-  box-sizing: content-box;
+
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
 /* Pasif bullet */
@@ -17,8 +19,6 @@
   background-color: #ed103b;
   width: 12px;
   height: 12px;
-  display: grid;
-  place-items: center;
   border-radius: 50%;
   opacity: 1;
   transition: all 0.3s;

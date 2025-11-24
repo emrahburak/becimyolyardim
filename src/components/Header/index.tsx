@@ -17,7 +17,7 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 bottom-0 w-full h-28  text-white shadow-md z-50 flex flex-row font-sans">
-      <div className="w-1/4 h-full flex flex-col relative">
+      <div className="w-1/3 h-full flex flex-col relative">
 
         {/* Üst */}
         <div className="w-full h-1/2 relative bg-gray-900">
@@ -42,17 +42,17 @@ export default function Header() {
         </div>
 
         {/* MERKEZDE LOGO + YAZI */}
-        <div className="absolute inset-0 flex flex-nowrap gap-3 items-center px-4  z-10 pointer-events-none">
-          <img src="/logo.png" alt="Logo" className="w-16 h-auto rounded-full mb-2" />
-          <div>
-            <p className="text-white font-extrabold text-xl">Beçim</p>
-            <p className="font-semibold text-lg">Oto Kurtarma</p>
+        <div className="absolute inset-0 flex flex-nowrap gap-1 items-center   z-10 pointer-events-none">
+          <img src="/logo.png" alt="Logo" className="w-16 h-auto rounded-full mb-2 ml-10" />
+          <div className="px-2">
+            <p className="text-white font-extrabold text-xl md:text-base">Beçim</p>
+            <p className="font-semibold text-lg md:text-base">Oto Kurtarma</p>
           </div>
         </div>
 
       </div>
       <div className="w-full  bg-white">
-        <div className=" text-white bg-gray-900 flex flex-row items-center justify-around  py-4">
+        <div className=" text-white bg-gray-900 flex flex-row items-center justify-between  py-4 px-10">
           <div className="flex items-center justify-start gap-3 font-normal text-sm">
             <div className="inline-flex flex-nowrap gap-1 items-center justify-center">
               <FaPhone className="text-black" fill="#ed103b" />
@@ -69,7 +69,7 @@ export default function Header() {
               {contactData.address}
             </div>
           </div>
-          <div className="flex items-center justify-start gap-1.5">
+          <div className="flex items-center justify-end gap-1.5  ">
             {contactData.social?.map((item, index) => (
               <a key={index} href={item.href} target="_blank" rel="noopener noreferrer">
                 {renderSocialIcon(item, "text-black w-5 h-5", "#ffff")}

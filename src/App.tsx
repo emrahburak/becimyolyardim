@@ -9,6 +9,7 @@ import { footerItems } from "./data/footerData";
 import { ContactData } from "./data/contact";
 import HamburgerMenu from "./components/HamburgerMenu";
 import { bannerData } from "./data/bannerData";
+import FastCall from "./components/FastCall";
 
 
 export default function App() {
@@ -23,11 +24,17 @@ export default function App() {
       <div className="block lg:hidden w-full">
         <HamburgerMenu />
       </div>
-      <Hero slideItems={bannerData} contactItems={ContactData} />
+      <Hero slideItems={bannerData} contactItems={ContactData} footerItems={footerItems} />
       <AboutUs />
       <Services />
       <ContactUs contactItems={ContactData} />
       <Footer footerItems={footerItems} />
+      {/* Acil Arama Butonu */}
+      <div className="fixed bottom-20 right-5 z-50 sm:hidden mb-2">
+        <FastCall contactItems={ContactData} />
+      </div>
+      <WhatsupField />
+
       <WhatsupField />
     </div>
   );

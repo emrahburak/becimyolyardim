@@ -14,7 +14,7 @@ export default function WhatsupField() {
       navigator.userAgent
     );
 
-    const phone = ContactData.phone90
+    const phone = ContactData.phone90;
     const base = isMobile
       ? `https://wa.me/${phone}`
       : `https://web.whatsapp.com/send?phone=${phone}`;
@@ -27,12 +27,24 @@ export default function WhatsupField() {
       href={waLink}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-5 right-5 bg-[#25D366] text-white px-4 py-2 rounded-full font-semibold shadow-md flex items-center gap-2 hover:scale-105 transition-transform z-50"
+      className="
+        fixed bottom-5 right-5 
+        bg-[#25D366] text-white 
+        flex items-center justify-center 
+        rounded-full shadow-md 
+        z-50 
+        transition-transform hover:scale-105
+        w-14 h-14               /* mobil için büyük ikon butonu */
+        sm:w-auto sm:h-auto     /* sm ve üstü cihazlarda klasik buton */
+        sm:px-4 sm:py-2
+      "
     >
-      <FontAwesomeIcon icon={faWhatsapp} />
-      <span className="hidden sm:block">
+      <FontAwesomeIcon icon={faWhatsapp} className="text-2xl sm:text-base" />
+
+      <span className="hidden sm:block font-semibold ml-2">
         WhatsApp
       </span>
     </a>
   );
 }
+
