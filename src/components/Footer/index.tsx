@@ -57,22 +57,21 @@ export default function Footer({ footerItems }: FooterProps) {
                   <span className="bg-white/30 backdrop-blur-sm p-1 rounded-sm">
                     <MapPin className="text-regal-navy" fill="#ffff" size={16} strokeWidth={1} />
                   </span>
-
                   {item.contact.address}
-                </a>
-                <a href={`tel:${formatPhone(item.contact.phone90).tel}`}
-                  className="inline-flex items-start gap-2.5 justify-start">
-
-                  <span className="bg-white/30 backdrop-blur-sm p-1 rounded-sm">
-                    <Phone className="text-regal-navy" fill="#ffff" size={14} />
-                  </span>
-                  {formatPhone(item.contact.phone90).display}
                 </a>
                 <a className="inline-flex items-start gap-2.5 justify-start">
                   <span className="bg-white/30 backdrop-blur-sm p-1 rounded-sm">
                     <Send className="text-regal-navy" fill="#ffff" size={14} />
                   </span>
-                  {item.contact.mail}</a>
+                  {item.contact.mail}
+                </a>
+                <a href={`tel:${formatPhone(item.contact.phone90).tel}`}
+                  className="inline-flex items-start gap-2.5 justify-start">
+                  <span className="bg-white/30 backdrop-blur-sm p-1 rounded-sm">
+                    <Phone className="text-regal-navy" fill="#ffff" size={14} />
+                  </span>
+                  {formatPhone(item.contact.phone90).display}
+                </a>
               </div>
             ) : null}
           </li>
