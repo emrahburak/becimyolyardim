@@ -1,5 +1,5 @@
 import MechanicalGears from '@/assets/images/webp/hero-08.webp'
-import BusinessPhoto from '@/assets/images/webp/becim-03.webp'
+import BusinessPhoto from '@/assets/images/webp/hero-11.webp'
 import VerticalSlide from '../VerticalSlide';
 import type { BannerData, FooterLinkGroup, IContact } from '@/types/type';
 
@@ -23,11 +23,11 @@ export default function Hero({ slideItems, contactItems, footerItems }: HeroProp
   return (
     <div
       id="hero"
-      className="relative w-full min-h-[520px] lg:min-h-[560px] flex flex-col lg:flex-row pt-[60px] lg:pt-0 "
+      className="relative w-full min-h-[520px] lg:min-h-[560px] flex flex-col lg:flex-row pt-[60px] lg:pt-0  "
     >
       {/* Sol taraf */}
       <div
-        className="w-full lg:w-1/2 h-[320px] lg:h-[640px] bg-cover bg-center flex flex-col items-center justify-center"
+        className="w-full lg:w-1/2 h-[320px] lg:h-[640px] bg-cover bg-center flex flex-col items-center justify-center "
 
         style={{
           backgroundImage: `linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url(${MechanicalGears})`,
@@ -54,6 +54,7 @@ export default function Hero({ slideItems, contactItems, footerItems }: HeroProp
           </div>
         </div>
       </div>
+
 
       {/* Sağ taraf */}
       <div className="relative w-full lg:w-1/2 h-[320px] lg:h-[640px] overflow-hidden">
@@ -86,6 +87,8 @@ export default function Hero({ slideItems, contactItems, footerItems }: HeroProp
           .hero-image {
             clip-path: polygon(25% 0, 100% 0%, 100% 100%, 0 100%);
           }
+
+         
 
           .hero-overlay {
             clip-path: polygon(0 26%, 18% 0, 75% 100%, 36% 100%);

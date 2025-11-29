@@ -35,22 +35,24 @@ export default function Footer({ footerItems }: FooterProps) {
               <span className="block w-6 h-[2px] bg-white"></span>
               <span className="block w-1 h-[2px] bg-white"></span>
             </div>
-
             {item.text ? (
               <p className="text-xs text-justify">{item.text}</p>
             ) : item.links ? (
-              item.links.map((link) => (
-                <span className="inline-flex items-center gap-2.5 justify-start">
-                  <MoveRight size={12} />
-                  <a
-                    href={link.link}
-                    key={link.id}
-                    className="block hover:underline text-xs"
-                  >
-                    {link.name}
-                  </a>
-                </span>
-              ))
+              <ul className="flex flex-col gap-1">
+                {
+                  item.links.map((link) => (
+                    <li className="inline-flex items-center gap-2.5 justify-start">
+                      <MoveRight size={12} />
+                      <a
+                        href={link.link}
+                        key={link.id}
+                        className="block hover:underline text-xs">
+                        {link.name}
+                      </a>
+                    </li>
+                  ))
+                }
+              </ul>
             ) : item.contact ? (
               <div className="space-y-2.5 text-xs">
                 <a className="inline-flex items-start gap-2.5 justify-start">

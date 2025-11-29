@@ -52,7 +52,7 @@ export default function Header() {
 
       </div>
       <div className="w-full  bg-white">
-        <div className=" text-white bg-gray-900 flex flex-row items-center justify-between  py-4 px-10">
+        <div className=" text-white bg-gray-900 flex flex-row items-center justify-between  py-4.5 px-10">
           <div className="flex items-center justify-start gap-3 font-normal text-sm">
             <div className="inline-flex flex-nowrap gap-1 items-center justify-center">
               <FaPhone className="text-black" fill="#ed103b" />

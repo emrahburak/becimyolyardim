@@ -26,7 +26,7 @@ export default function HorizontalSlide({ slideItems }: HorizontalSlideProps) {
         delay: 7000,
         disableOnInteraction: false
       }}
-      className="mySwiperHorizontal w-full min-h-[200px] mt-20"
+      className="mySwiperHorizontal w-full min-h-[200px] mt-28"
     >
       {slideItems?.map((item) => (
         <SwiperSlide key={item.id} className="bg-transparent py-4">

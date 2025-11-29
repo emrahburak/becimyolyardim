@@ -3,7 +3,7 @@ import type { BannerData } from "@/types/type";
 export const bannerData: BannerData[] = [
   {
     id: 1,
-    title: "7/24 Acil Yol Yardım – Muğla’nın Her Noktasındayız",
+    title: "7/24 Acil Yol Yardım – Muğla/Milas’ın Her Noktasındayız",
     description:
       "Muğla genelinde hızlı ve profesyonel acil yol yardımı sağlıyoruz. Ekibimiz günün her saati sadece bir telefon uzağınızda.",
   },
@@ -17,7 +17,7 @@ export const bannerData: BannerData[] = [
     id: 3,
     title: "Tekne ve Araç Taşıma – Muğla Bölgesine Özel Profesyonel Hizmet",
     description:
-      "Bodrum, Marmaris ve Fethiye başta olmak üzere Muğla kıyı şeridinde güvenli tekne taşıma ve araç transferi gerçekleştiriyoruz. Taşıma sürecinin her aşamasında kontrol sizde.",
+      "Milas, Bodrum, Marmaris ve Fethiye başta olmak üzere Muğla kıyı şeridinde güvenli tekne taşıma ve araç transferi gerçekleştiriyoruz. Taşıma sürecinin her aşamasında kontrol sizde.",
   },
   {
     id: 4,

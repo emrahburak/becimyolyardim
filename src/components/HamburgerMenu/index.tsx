@@ -13,7 +13,7 @@ export default function HamburgerMenu() {
   }, [open]);
 
   return (
-    <div className="fixed top-0 left-0 w-full z-50 bg-regal-navy shadow-md font-sans">
+    <div className="fixed top-0 left-0 w-full  bg-regal-navy shadow-md font-sans" style={{zIndex:"100"}}>
       <div className="flex justify-between items-center p-4">
         <img src="/logo.png" alt="Logo" className="w-16 h-auto rounded-full mb-2" />
         <div className="text-xl font-bold text-white">Beçim Oto Kurtarma</div>
@@ -32,7 +32,7 @@ export default function HamburgerMenu() {
           {/* Sağ üst X */}
           <button
             onClick={() => setOpen(false)}
-            className="absolute top-4 right-4 text-white text-3xl font-bold"
+            className="absolute top-4 right-4 text-white text-5xl font-bold"
           >
             &times;
           </button>
