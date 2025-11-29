@@ -1,5 +1,5 @@
 
-import { FaFacebookSquare,FaInstagram } from "react-icons/fa";
+import { FaFacebookSquare, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 type SocialItem = {
   href?: string
@@ -11,13 +11,15 @@ export function renderSocialIcon(
   className: string,
   fill: string
 ) {
-  if (!item?.href) return 
+  if (!item?.href) return
 
   switch (item.title?.toLowerCase()) {
     case 'instagram':
       return <FaInstagram className={className} fill={fill} />
     case 'facebook':
       return <FaFacebookSquare className={className} fill={fill} />
+    case 'linkedin':
+      return <FaLinkedin className={className} fill={fill} />
     default:
       return null
   }
