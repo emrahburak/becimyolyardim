@@ -22,9 +22,15 @@ export const footerItems: FooterLinkGroup[] = [
     title: "İletişim",
     contact: ContactData,
   },
-
   {
     title: "Çalışma Saatleri",
     text: "Muğla genelinde 7/24 hızlı ve güvenli yol yardım hizmeti",
+  },
+  {
+    title: "Kurumsal",
+    links: [
+      // React Router'da tanımladığımız '/gizlilik' yolunu buraya veriyoruz
+      { id: 99, name: "Gizlilik ve Kullanım Şartları", link: "/gizlilik" },
+    ],
   },
 ];

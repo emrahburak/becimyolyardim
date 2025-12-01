@@ -11,4 +11,18 @@ export default defineConfig({
       "@": path.resolve(__dirname, "src"),
     },
   },
+  build: {
+    // Uyarı limitini biraz artırabiliriz (örneğin 1000kb), ama asıl çözüm altta
+    chunkSizeWarningLimit: 1000,
+    rollupOptions: {
+      output: {
+        // Bu fonksiyon, kütüphaneleri (vendor) ayrı bir dosyaya paketler
+        manualChunks(id) {
+          if (id.includes("node_modules")) {
+            return "vendor";
+          }
+        },
+      },
+    },
+  },
 });

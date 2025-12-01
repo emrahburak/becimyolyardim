@@ -23,7 +23,7 @@ export default function Footer({ footerItems }: FooterProps) {
         <img src="/logo.png" alt="Logo" className="w-16 h-auto rounded-full mb-4 " />
       </div>
 
-      <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 w-3/4 mx-auto">
+      <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-2 w-3/4 mx-auto">
 
 
         {footerItems?.map((item, index) => (

@@ -16,6 +16,7 @@ import { FreeMode, Autoplay } from 'swiper/modules';
 
 import { ServiceData } from "@/data/serviceData";
 import { Crown } from 'lucide-react';
+import Galery from "../Galeri";
 
 
 
@@ -71,6 +72,10 @@ export default function Services() {
             </SwiperSlide>
           ))}
         </Swiper>
+      </div>
+
+      <div className="mt-5">
+        <Galery />
       </div>
 
 
