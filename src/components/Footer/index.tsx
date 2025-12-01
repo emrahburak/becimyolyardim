@@ -41,11 +41,10 @@ export default function Footer({ footerItems }: FooterProps) {
               <ul className="flex flex-col gap-1">
                 {
                   item.links.map((link) => (
-                    <li className="inline-flex items-center gap-2.5 justify-start">
+                    <li key={link.id} className="inline-flex items-center gap-2.5 justify-start">
                       <MoveRight size={12} />
                       <a
                         href={link.link}
-                        key={link.id}
                         className="block hover:underline text-xs">
                         {link.name}
                       </a>

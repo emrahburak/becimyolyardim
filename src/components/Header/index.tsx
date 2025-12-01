@@ -1,3 +1,4 @@
+
 import { ContactData } from "../../data/contact";
 import { formatPhone } from "@/utils/phoneUtil";
 
@@ -6,7 +7,9 @@ import { IoIosSend } from "react-icons/io";
 import { FaPhone } from "react-icons/fa6";
 
 
+
 import { renderSocialIcon } from "../RenderSocial";
+import { useLocation } from "react-router-dom";
 
 
 
@@ -14,6 +17,21 @@ import { renderSocialIcon } from "../RenderSocial";
 export default function Header() {
   const contactData = ContactData
   const { display, tel } = formatPhone(contactData.phone90)
+
+  // Adım 1: Mevcut konumu al
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
+  // Eğer birden fazla dil veya farklı ana sayfa yolları varsa
+  // isHomePage = location.pathname === '/' || location.pathname === '/home' gibi genişletebilirsin.
+
+  // Linklerin listesini tanımlayabiliriz. Bu, kodu daha temiz yapar.
+  const navLinks = [
+    { name: 'Ana Sayfa', id: 'hero' },
+    { name: 'Hakkımızda', id: 'about' },
+    { name: 'Hizmetler', id: 'services' },
+    { name: 'İletişim', id: 'contact' },
+  ];
+
 
   return (
     <header className="fixed top-0 left-0 bottom-0 w-full h-28  text-white shadow-md z-50 flex flex-row font-sans">
@@ -77,11 +95,16 @@ export default function Header() {
             ))}
           </div>
         </div>
-        <nav className="flex items-center  gap-6 bg-white  font-semibold text-regal-black py-3 w-full px-28 h-fit">
-          <a href="#hero">Ana Sayfa</a>
-          <a href="#about">Hakkımızda</a>
-          <a href="#services">Hizmetler</a>
-          <a href="#contact">İletişim</a>
+        <nav className="flex items-center gap-6 bg-white font-semibold text-regal-black py-3 w-full px-28 h-fit">
+          {navLinks.map((link) => (
+            <a
+              key={link.id}
+              // Adım 2: Koşullu Link Oluşturma
+              href={isHomePage ? `#${link.id}` : `/#${link.id}`}
+            >
+              {link.name}
+            </a>
+          ))}
         </nav>
       </div>
     </header>

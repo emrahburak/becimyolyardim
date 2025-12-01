@@ -1,7 +1,11 @@
 import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 export default function HamburgerMenu() {
   const [open, setOpen] = useState(false);
+
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
 
   // Body scroll kontrolü
   useEffect(() => {
@@ -12,8 +16,30 @@ export default function HamburgerMenu() {
     }
   }, [open]);
 
+
+  const navLinks = [
+    { name: 'Ana Sayfa', id: 'hero' },
+    { name: 'Hakkımızda', id: 'about' },
+    { name: 'Hizmetler', id: 'services' },
+    { name: 'İletişim', id: 'contact' },
+    { name: 'Gizlilik Politikası', id: 'gizlilik-politikasi' }, // Yeni bir link ekleyelim
+  ];
+
+  // Menüden bir linke tıklandığında menüyü kapatan ve yönlendirmeyi yapan fonksiyon
+  const handleLinkClick = (id: string) => {
+    setOpen(false);
+
+    if (id === 'gizlilik-politikasi') {
+      window.location.href = '/gizlilik'; // Gizlilik sayfasına tam yönlendirme
+      return;
+    }
+
+    // Diğer linkler için koşullu yönlendirme
+    window.location.href = isHomePage ? `#${id}` : `/#${id}`;
+  };
+
   return (
-    <div className="fixed top-0 left-0 w-full  bg-regal-navy shadow-md font-sans" style={{zIndex:"100"}}>
+    <div className="fixed top-0 left-0 w-full  bg-regal-navy shadow-md font-sans" style={{ zIndex: "100" }}>
       <div className="flex justify-between items-center p-4">
         <img src="/logo.png" alt="Logo" className="w-16 h-auto rounded-full mb-2" />
         <div className="text-xl font-bold text-white">Beçim Oto Kurtarma</div>
@@ -38,10 +64,15 @@ export default function HamburgerMenu() {
           </button>
 
           <img src="/logo.png" alt="Logo" className="w-16 h-auto rounded-full mb-2" />
-          <a href="#hero" onClick={() => setOpen(false)}>Ana Sayfa</a>
-          <a href="#about" onClick={() => setOpen(false)}>Hakkımızda</a>
-          <a href="#services" onClick={() => setOpen(false)}>Hizmetler</a>
-          <a href="#contact" onClick={() => setOpen(false)}>İletişim</a>
+          {navLinks.map((link) => (
+            <a
+              key={link.id}
+              // Burada href yerine onClick kullanıyoruz, çünkü sadece tek sayfa içi kaydırmadan fazlası gerekli.
+              onClick={() => handleLinkClick(link.id)}
+            >
+              {link.name}
+            </a>
+          ))}
         </div>
       )}
     </div>
